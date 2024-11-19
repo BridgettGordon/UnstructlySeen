@@ -1,1 +1,34 @@
+############################## Uploading and Merging datasets as DataFrames #####################################
+import pandas as pd
 
+df1=pd.read_csv('sdoh_data.csv')
+df2=pd.read_csv('SVI_USCounty_2020.csv')
+# Drop columns with 'Unnamed' in their names
+df2 = df2.loc[:, ~df2.columns.str.contains('^Unnamed')]
+#print(df2.head())
+#print(df1.head())
+merged_df = pd.merge(df1, df2, how='left', on='FIPS')
+merged_df = merged_df.drop(columns=['ST_ABBR'])
+merged_df.head()
+
+############################## Calculating the Average SVI rate per State ######################################
+# Group by 'state' and calculate the mean SVI score for each state
+state_avg_svi = merged_df.groupby('State')['Value'].mean().reset_index()
+# Rename columns for clarity
+state_avg_svi.columns = ['State', 'Avg_SVI']
+# Display the result
+print(state_avg_svi)
+
+############################## Calculating the Average for each Theme per State #################################
+# List of theme columns to include in the calculation
+theme_columns = ['SPL_THEME1', 'SPL_THEME2', 'SPL_THEME3', 'SPL_THEME4']
+# Group by 'state' and calculate the mean for each theme column
+state_avg_themes = merged_df.groupby('State')[theme_columns].mean().reset_index()
+# Display the result
+print(state_avg_themes)
+
+############################## Merging Average SVI and Average Theme per State into on DataFrame ####################
+# Merge on the 'state' column
+merged_df2 = pd.merge(state_avg_svi, state_avg_themes, on='State')
+# Display the merged DataFrame
+merged_df2
