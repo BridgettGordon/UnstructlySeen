@@ -1,1 +1,63 @@
+MSDS 570, Dr. Qian
+Final Project Type I
+SVI Score and Themes by State in US
+Bridgett Gordon
+
+1.	Propose a data visualization project problem you need to solve
+Currently the Social Vulnerability Index (SVI) is done by county and zip code level, so I thought it would be interesting to visualize the SVI at the state level along with the 4 Themes of SVI
+
+2.	Briefly introduce your project with a broad motivation (i.e. why are you choosing this problem, why is it important to solve, what are the benefits of solving it)
+At Ascension, the work that I am involved in requires that we are knowledgeable about the needs in the communities we serve.  We often use the SVI by zip code level to identify areas that our programs can make the biggest impact.  To visualize the expanded view by state gives the opportunity to see, across several visualization types, the states with the most need(s) and possibly why those needs exist.
+
+3.	Describe the project goals and its expected outcomes
+I aim to calculate the average state level SVI scores across the US by using the county level data, then comparing that information to the 4 theme scores to assess which theme(s) is the greatest need per state.
+
+4.	Dataset used and its description 
+The final dataset used for the visualizations will be a merge of certain columns from two different datasets that will include the following information:
+
+COLUMN NAME	DESCRIPTION
+Measure	Social Vulnerability Index (SVI)
+FIPS	Federal Information Processing Standards Code (County level is 5 digits with the first two digits being the state FIPS code) that assist with identifying geographic features.  This code is maintained by The American National Standards Institute (ANSI)
+County/Location	Counties listed in each State
+State	Abbreviation of each State
+Value	The SVI score that ranges between 0 – 1:   
+0 being the Lowest Vulnerability
+1 being the Highest Vulnerability
+The closest a score is to 1 will be high level of vulnerability; the closest a is to 0 will be a low level of vulnerability.  Categories range from Low, Medium-Low, High, Medium-High.
+EPL_PVOV150 (THEME1)	Percentage of persons below 150% poverty estimate
+EPL_UNEMP (THEME1)	Percentage of civilian (age 16+) unemployed estimate
+EPL_HBURD (THEME 1)	Percentage of housing cost-burdened occupied housing units estimate
+EPL_NOHSDP (THEME1)	Percentage of persons with no high school diploma (age 25+) estimate
+EPL_UNINSUR (THEME1)	Percentage of uninsured estimate
+SPL_THEME1	Sum of series for Socioeconomic Status Theme
+RPL_THEME1	Percentile ranking for Socioeconomic Status Theme Summary
+EPL_AGE65 (THEME2)	Percentage of persons aged 65 and older estimate
+EPL_AGE17 (THEME2)	Percentage of persons aged 17 and younger estimate
+EPL_DISABL (THEME2)	Percentage of civilian noninstitutionalized population with a disability estimate
+EPL_SNGPNT (THEME2)	Percentage of single-parent households with children under 18 estimate
+EPL_LIMENG (THEME 2)	Percentage of persons (age 5+) who speak English “less than well” estimate
+SLP_THEME2 	Sum of series for Household Characteristics Theme
+RPL_THEME2	Percentile ranking for Household Characteristics Theme Summary
+EPL_MINRTY (THEME3)	Percentage of minority (Hispanic or Latino(of any race); Black and African American, Not Hispanic or Latino; American Indian and Alaska Native, Not Hispanic or Latino; Asian, Not Hispanic or Latino; Native Hawaiian and Other Pacific Islander, Not Hispanic or Latino; Two or More Races, Not Hispanic or Latino; Other Races, Not Hispanic or Latino) estimate
+SPL_THEME3	Sum of series for Racial and Ethnic Minority Status Theme
+RPL_THEME3	Percentile Rankings for Racial and Ethnic Minority Status Theme
+EPL_MUNIT (THEME4)	Percentage housing in structures with 10 or more units estimate
+EPL_MOBILE (THEME4)	Percentage mobile homes estimate
+EPL_CROWD (THEME4)	Percentage households with more people than rooms estimate
+EPL_NOVEH (THEME4)	Percentage households with no vehicle available estimate
+EPL_GROUPQ (THEME4)	Percentage of persons in group quarters estimate
+SPL_THEME4	Sum of series of Housing Type/Transportation 
+Theme
+RPL_THEME4	Percentile ranking for Housing Type/Transportation Theme.
+
+ I realize that I have quite a bit of data to use but I am thinking the more I have available the more opportunity to create different visualizations that will showcase and/or compare values. 
+
+Note:  Part of my code will be to merge these datasets before doing visualizations, but my updated datasets are attached to Blackboard.
+
+
+
+
+
+
+
 
